@@ -48,7 +48,7 @@ class Chatbot:
     def _web_search(self, query):
         """执行联网搜索"""
         try:
-            from ddgs import DDGS
+            from duckduckgo_search import DDGS
             with DDGS() as ddgs:
                 results = list(ddgs.text(query, max_results=5))
                 if results:
